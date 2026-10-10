@@ -1,0 +1,48 @@
+{
+  "accelerator_execution": false,
+  "all_lifecycle_checks_passed": true,
+  "all_outputs_exact": true,
+  "evidence_label": "matched_process_mock_non_performance",
+  "exact_replays_per_run": 4,
+  "execution_artifact_identity_sha256": "f82b25e00bd40891a870987087ca285dbc6a7d8c42d19d2790b6328b30cac38f",
+  "execution_config_sha256": "09682f76a33b63dd5312aa7a0f7b43f9b2e1144cbd22c14ba952b9a9907e0815",
+  "manager_commit": "00d1b940dc6ce8d60e2cd28708b80d80e9c33a09",
+  "manager_dirty": false,
+  "mod_commit": "8c882ef9c9867de326d6ec96b24b5e207dc93b77",
+  "mod_dirty": false,
+  "mod_untracked_evidence_excluded_from_dirty": true,
+  "off": {
+    "offloads_per_run": 0,
+    "restore_hits_per_run": 0,
+    "runs": 3
+  },
+  "on": {
+    "capacity_rejections_per_run": 0,
+    "host_resident_generations_after_run": 1,
+    "offloads_during_replays_per_run": 4,
+    "restore_hits_per_run": 4,
+    "runs": 3
+  },
+  "order": [
+    [
+      "OFF",
+      "ON"
+    ],
+    [
+      "ON",
+      "OFF"
+    ],
+    [
+      "OFF",
+      "ON"
+    ]
+  ],
+  "pairs": 3,
+  "performance_claim": false,
+  "research_manifest_sha256": "1536c77e8050277113b4f3aa4243ffa3a974c1a5e2df11e46d2c0e0b3b280359",
+  "result": "pass",
+  "runs": 6,
+  "schema_version": "stateaxis-host-tier-ecpa-matched-process-summary/v1",
+  "stateaxis_commit": "a52f9d5a3d6caf960f3d200760f1e5f78f9d84d1",
+  "stateaxis_dirty": false
+}

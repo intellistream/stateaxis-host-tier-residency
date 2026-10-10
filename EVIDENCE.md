@@ -6,7 +6,10 @@
 - Status: active, default-off, experimental, not performance-qualified
 - The Manifest 0.3 contract activates bounded exact host-tier residency through
   Extension Manager/ECPA.
-- Fresh matched-process activation evidence will be recorded under `evidence/`.
+- `evidence/ecpa-matched-process-20261010/`
+  - three interleaved fresh-process OFF/ON pairs through Extension Manager/ECPA
+  - exact outputs, exact restore identity, bounded lifecycle, clean shutdown
+  - labelled `matched_process_mock_non_performance`; no accelerator claim
 
 ## Preserved historical evidence
 
