@@ -1,0 +1,67 @@
+{
+  "benchmark_commit": "e0be296bfbb536b5c8341bfbb8a9908fda60228d",
+  "benchmark_repository": "vLLM-HUST/vllm-hust-benchmark",
+  "generated_at": "2026-10-10T02:29:59+00:00",
+  "protocol": {
+    "activation_telemetry_required": true,
+    "correctness_required": true,
+    "failure_recovery_required": true,
+    "fresh_service_repetitions_per_arm": 3,
+    "pair_order": [
+      "OFF/ON",
+      "ON/OFF",
+      "OFF/ON"
+    ],
+    "phase": "activation_admission",
+    "required_metrics": [
+      "request_throughput",
+      "output_token_throughput",
+      "ttft_p50_p95_p99",
+      "tpot_p50_p95_p99",
+      "e2e_p50_p95_p99",
+      "peak_hbm",
+      "error_rate"
+    ],
+    "resource_release_required": true,
+    "rule": "No OFF-only or inert-import run may be reported as an ON/OFF performance result.",
+    "same_spec_required": true
+  },
+  "result": {
+    "blockers": [
+      {
+        "code": "IMPLEMENTATION_NOT_ACTIVE",
+        "detail": "implementation statuses are ['import_only']"
+      },
+      {
+        "code": "NO_ACTIVATION_ENTRY_POINT",
+        "detail": "Manifest activation.entry_points is empty"
+      },
+      {
+        "code": "IMPLEMENTATION_NOT_EXTRACTED",
+        "detail": "PROVENANCE.json implementation_extracted is not true"
+      },
+      {
+        "code": "ACTIVATION_CONTRACT_REFUSES_ON",
+        "detail": "Import-only research descriptor; activation is refused until the StateAxis host contract and independent implementation are reviewed."
+      }
+    ],
+    "local_head": "4666bc7de0fe65cf2b388043872d198c5f5e41ec",
+    "manifest": {
+      "implementation_statuses": [
+        "import_only"
+      ],
+      "path": "src/stateaxis_host_tier_residency/vllm-hust-extension-v0.3.json",
+      "schema_version": "0.3-experimental",
+      "sha256": "55a42294fa2feef73379f02d51d187293cdd33f08e06f09c06a4a6badff5553e"
+    },
+    "metadata_sha256": "63acdf6f2ac7c40949141067b93f04d92a5b26fbdc49ed5f41e4de474768e316",
+    "mod_id": "org.vllm-hust.stateaxis-host-tier-residency",
+    "off_status": "NOT_RUN_NO_PAIRED_ON_ARM",
+    "on_status": "ON_NOT_RUNNABLE",
+    "performance_result": null,
+    "pinned_commit": "cd2450664fe69d3406a83647de61685faea75406",
+    "provenance_sha256": "21cd6aec16b4a98ec637e31568bcf4b39a08442c0fa48115e79c85e828718504",
+    "repository": "intellistream/stateaxis-host-tier-residency"
+  },
+  "schema_version": "vllm-hust-benchmark/stateaxis-mod-on-off-preflight/v1"
+}
