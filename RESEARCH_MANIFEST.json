@@ -1,0 +1,48 @@
+{
+  "schema_version": "stateaxis-research-mod/v1",
+  "mod_id": "org.vllm-hust.stateaxis-host-tier-residency",
+  "version": "0.2.0",
+  "mechanism": {
+    "name": "bounded-generation-safe-host-tier-residency",
+    "enabled": true,
+    "max_resident_states": 2,
+    "generation_bound": true,
+    "location_epoch_required": true,
+    "snapshot_sha256_required": true,
+    "exact_byte_accounting": true,
+    "transactional_transitions": true,
+    "response_first_offload": true,
+    "prefetch_enabled": false,
+    "fail_closed": true
+  },
+  "host_contract": {
+    "provider": "stateaxis",
+    "api_range": ">=1,<2",
+    "implementation": "statecentric_engine:parse_host_tier_residency_additional_config",
+    "effect_counters": [
+      "host_tier_authority_requests",
+      "host_tier_authority_applied",
+      "host_tier_authority_fallbacks",
+      "host_tier_restore_hits",
+      "host_tier_mod_capacity_rejections",
+      "host_tier_current_states",
+      "host_tier_current_bytes"
+    ]
+  },
+  "qualification": {
+    "performance_qualified": false,
+    "evidence_label": "historical-matched-real-online-negative-tested-cell",
+    "scope": "Qwen2.5-14B BF16 single-worker host-tier offload/restore and serialized-prefetch gate",
+    "blockers": [
+      "the historical prefetch candidate was slower than control",
+      "the historical result predates the independent Manifest 0.3 activation",
+      "fresh matched ECPA real-online repetitions are required",
+      "no general latency, throughput, HBM, or capacity claim is established"
+    ]
+  },
+  "source": {
+    "repository": "Qixin-Gaoke/stateaxis",
+    "commit": "7562b5fa6f42e2e045a877b53ac934739e2cf230",
+    "issues": [9, 77]
+  }
+}

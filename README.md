@@ -2,16 +2,18 @@
 
 Extension ID: `org.vllm-hust.stateaxis-host-tier-residency`
 
-Exact host-tier continuation authority with descriptor-decoupled restore.
+Bounded exact host-tier continuation authority with generation-safe restore.
 
 This repository is the independent MOD boundary for StateAxis issues [#9](https://github.com/Qixin-Gaoke/stateaxis/issues/9), [#77](https://github.com/Qixin-Gaoke/stateaxis/issues/77).
-It is deliberately `import_only`, default-off, and cannot be enabled. The split does
-not inherit correctness, device, performance, or publication qualification from the
+Version `0.2.0` is an active, default-off Manifest 0.3 runtime bridge. It can
+only be enabled through vLLM-HUST Extension Manager/ECPA and the StateAxis host
+accepts only the exact research-manifest digest and reviewed two-state contract.
+The split does not inherit performance or publication qualification from the
 aggregate StateAxis repository.
 
 ## Evidence boundary
 
-Status: **negative**.
+Status: **historical prefetch negative; independent activation unqualified**.
 
 Correctness authority is usable, but serialized prefetch and restore crossover were not beneficial in the tested cells.
 
@@ -27,10 +29,11 @@ vllm-hust-ext extension inspect org.vllm-hust.stateaxis-host-tier-residency
 vllm-hust-ext extension check org.vllm-hust.stateaxis-host-tier-residency
 ```
 
-Discovery does not enable the MOD. A future active revision must extract an
-independently reviewable implementation, declare exclusive resources where needed,
-and pass exactness, lifecycle, release, failure-recovery, and matched real-online
-gates.
+Discovery does not enable the MOD. Enabling it claims the exclusive host-tier
+residency authority, caps tracked generations at two, binds every transition to
+state ID, generation, location epoch, byte count and payload SHA-256, and fails
+closed. Prefetch remains disabled because the preserved matched experiment was
+negative.
 
 ## Validate
 

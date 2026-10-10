@@ -18,26 +18,28 @@
   "lifecycle": {
     "status": "experimental",
     "default_enabled": false,
-    "activation_contract": "Import-only research descriptor; activation is refused until the StateAxis host contract and independent implementation are reviewed.",
-    "rollback_contract": "Disable or forget the descriptor and run the unchanged StateAxis host without this MOD."
+    "activation_contract": "Manifest 0.3 active, default-off, ECPA-only activation of the hash-bound two-state exact residency contract.",
+    "rollback_contract": "Omit this MOD from the Extension Manager plan; StateAxis retains its default-off host-tier authority and no MOD identity."
   },
   "scope": {
     "mechanism": "host_device_state_residency",
-    "supported_workloads": [],
+    "supported_workloads": [
+      "generation-safe host-tier offload and exact restore under device state-slot pressure"
+    ],
     "out_of_scope": [
       "general performance claims",
       "automatic inheritance from StateAxis aggregate evidence"
     ]
   },
   "evidence": {
-    "qualification": "not-beneficial-in-tested-cell",
+    "qualification": "historical-negative-version-unqualified",
     "latest_result": "evidence/ISSUE9_HOST_TIER_PREFETCH_CLOSURE_20260815.md",
     "index": "EVIDENCE.md",
     "performance_claims": [
       {
-        "label": "not-beneficial-in-tested-cell",
+        "label": "historical-matched-real-online-negative-tested-cell",
         "scope": "frozen StateAxis source evidence only",
-        "result": "Correctness authority is usable, but serialized prefetch and restore crossover were not beneficial in the tested cells."
+        "result": "Correctness authority was usable, but serialized prefetch and restore crossover were not beneficial in the frozen cell; version 0.2.0 requires fresh ECPA qualification."
       }
     ]
   }
