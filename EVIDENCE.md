@@ -16,6 +16,9 @@
 - `evidence/ISSUE9_HOST_TIER_PREFETCH_CLOSURE_20260815.md`
   - matched real-NPU negative for serialized prefetch in its tested cell
   - exact residency authority was correct, but the candidate increased latency
+- `evidence/issue9-host-tier-prefetch-20260815-r1/`
+  - machine-readable 1+1 arm results, run identities, hardware selection and audits
+  - preregistered stop-rule negative; no 3+3 samples were collected or discarded
 - `evidence/on-off-preflight-20261010/`
   - preserved pre-activation result; ON was not runnable at version `0.1.0.dev0`
 
