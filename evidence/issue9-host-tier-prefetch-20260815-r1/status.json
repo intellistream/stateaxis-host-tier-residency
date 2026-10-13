@@ -1,0 +1,17 @@
+{
+  "capacity_scaling_claim": false,
+  "completed": true,
+  "conclusion": "negative",
+  "device_overlap_claim": false,
+  "exit_code": 0,
+  "format": "statecentric-issue9-host-tier-prefetch-status-v1",
+  "matched_arms": [
+    "control",
+    "candidate"
+  ],
+  "physical_npu": 3,
+  "repetitions_per_arm": 1,
+  "schema_version": 1,
+  "speedup_claim": false,
+  "three_plus_three_eligible": false
+}

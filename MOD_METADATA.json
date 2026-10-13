@@ -32,14 +32,14 @@
     ]
   },
   "evidence": {
-    "qualification": "historical-negative-version-unqualified",
-    "latest_result": "evidence/ISSUE9_HOST_TIER_PREFETCH_CLOSURE_20260815.md",
+    "qualification": "historical_matched_real_npu_stop_rule_negative_active_revision_performance_unqualified",
+    "latest_result": "evidence/issue9-host-tier-prefetch-20260815-r1/result.json",
     "index": "EVIDENCE.md",
     "performance_claims": [
       {
-        "label": "historical-matched-real-online-negative-tested-cell",
-        "scope": "frozen StateAxis source evidence only",
-        "result": "Correctness authority was usable, but serialized prefetch and restore crossover were not beneficial in the frozen cell; version 0.2.0 requires fresh ECPA qualification."
+        "label": "historical-matched-real-npu-stop-rule-negative",
+        "scope": "frozen StateAxis issue #9 prefetch R1; Qwen2.5-14B BF16; Ascend 910B2; TP1; one fresh process per arm",
+        "result": "Exactness, state identity and lifecycle passed, but host-tier-hit wall time regressed from 596.474 ms to 631.609 ms (+5.89%), pair makespan increased by 24.675 ms, peak HBM increased by 2 MiB, and measured device overlap was zero. The preregistered stop rule ended the campaign at 1+1; active version 0.2.0 remains performance-unqualified."
       }
     ]
   }

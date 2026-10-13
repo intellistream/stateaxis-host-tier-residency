@@ -13,13 +13,25 @@ aggregate StateAxis repository.
 
 ## Evidence boundary
 
-Status: **historical prefetch negative; independent activation unqualified**.
+Status: **historical matched real-NPU prefetch negative; active revision
+performance-unqualified**.
 
-Correctness authority is usable, but serialized prefetch and restore crossover were not beneficial in the tested cells.
+The frozen Qwen2.5-14B/Ascend 910B2 1+1 gate passed exactness, state identity and
+lifecycle checks, but serialized prefetch was slower: host-tier-hit wall time rose
+from 596.474 ms to 631.609 ms (+5.89%), concurrent-pair makespan rose from
+619.076 ms to 643.752 ms (+24.675 ms), and peak HBM rose by 2 MiB. Candidate
+queue wait was 570.013 ms and measured device overlap was zero. The preregistered
+stop rule therefore correctly prevented a 3+3 campaign.
 
-The copied evidence and its SHA-256 are recorded in `PROVENANCE.json`. Negative,
-failed, and inconclusive results are retained. Microbenchmarks and component results
-must not be restated as online end-to-end gains.
+This is a historical, workload-scoped negative result, not a statement that exact
+tiered residency is always harmful. The later asynchronous transfer lane addresses
+the serial worker boundary separately. Version 0.2.0 does not inherit the historical
+result and remains performance-unqualified.
+
+The compact machine-readable evidence is under
+`evidence/issue9-host-tier-prefetch-20260815-r1/`; its source hashes are recorded
+in `SHA256SUMS`. Negative, failed, and inconclusive results are retained.
+Microbenchmarks and component results must not be restated as online end-to-end gains.
 
 ## Install and inspect
 
